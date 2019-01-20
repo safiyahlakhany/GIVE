@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <link href="../static/stylesheets/index_style.css" type="text/css" rel="stylesheet">
+    <link href="../static/stylesheets/page_style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500" rel="stylesheet">
+        <link rel="icon" href="{{ url_for('static', filename='favicon.png')}}">
+  </head>
+
+
+  <body>
+    <a href="./">
+        <img src="{{ url_for('static', filename="logo.png")}}" class="page_logo"/>
+    </a>
+
+    <img src="{{ url_for('static', filename="request_2.png")}}" class="title_img"/>
+    
+    <form action="{{ url_for("my_request") }}" method="post">
+    <h2 class="prompt"> Organization: <input type="text" name="org"> </h2>
+    <h2 class="prompt"> Zipcode: <input type="text" name="zcode"> </h2>
+    <h2 class="prompt"> Email: <input type="text" name="email"> </h2>
+    <h2 class="prompt"> Category: <select name="category"> </h2>
+        <option value="" disabled selected>Category</option>
+        <option value="Bedding"> Bedding </option>
+        <option value="Cleaning Supplies"> Cleaning Supplies </option>
+        <option value="Clothes"> Clothes </option>
+        <option value="Food"> Food </option>
+        <option value="Women's Products"> Women's Products </option>
+      </select>
+    </h2>
+    <input type="image" src="../static/submit.png" class="button" id="page_button">
+    </form>
+
+  <!---
+    <button onclick="transferInfo()">
+        <img src="{{ url_for('static', filename="submit.png")}}" class="button" align="center" id="page_button">
+    </button>
+
+    <script>
+      function transferInfo()
+      {
+        var org, zcode, email, category;
+        org = document.getElementById("org")
+        zcode = document.getElementById("zcode");
+        email = document.getElementById("email")
+        category = document.getElementById("category");
+
+        console.log(org.value)
+        console.log(zcode.value)
+        console.log(email.value)
+        console.log(category.value)
+      }
+
+    </script>
+-->
+  </body>
+
+
+  </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+     <link href="{{ url_for('static', filename='stylesheets/index_style.css') }}" type="text/css" rel="stylesheet">
+      <link href="{{ url_for('static', filename='stylesheets/page_style.css') }}" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png')}}">
+  </head>
+
+
+  <body>
+    <a href="./">
+        <img src="../static/logo.png" class="page_logo">
+    </a>
+    <img src="{{ url_for('static', filename="donate_2.png")}}" class="title_img"/>
+    
+    <form action="{{ url_for("donate") }}" method="post" class = check>
+    <h2 class="prompt"> Zipcode: <input type="text" name="zipcode"> </h2>
+    <h2 class="prompt"> Category:
+      <select name="category">
+        <option value="" disabled selected>Category</option>
+        <option value="Bedding"> Bedding </option>
+        <option value="Cleaning Supplies"> Cleaning Supplies </option>
+        <option value="Clothes"> Clothes </option>
+        <option value="Food"> Food </option>
+        <option value="Women's Products"> Women's Products </option>
+      </select>
+    </h2>
+
+    <input type="image" src="../static/results.png" class="button">
+  
+    </form>
+
+    
+  </body>
+
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <link href="{{ url_for('static', filename='stylesheets/index_style.css') }}" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
+  </head>
+
+  <body>
+    <div class="main">
+        <img src="{{ url_for('static', filename="logo.png") }}" class="logo"> </img>
+    <p class="text">
+      <i> Give </i> is a digital matching platform that connects organizations
+      such, as homeless shelters, with individuals willing to donate materials.
+    </p>
+    <div class="button_section" align="center">
+        <a href="donate">
+        <img src="{{ url_for('static', filename="donate.png") }}" class="button">
+      </a>
+        <a href="my_request">
+          <img src="{{ url_for('static', filename="request.png") }}" class="button">
+      </a>
+    </div>
+  </div>
+  </body>
+
+
+</html>

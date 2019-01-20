@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    
+    <link href="{{ url_for('static', filename='stylesheets/index_style.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='stylesheets/page_style.css') }}" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png')}}">
+  </head>
+
+
+  <body>
+    <a href="./">
+        <!--
+          <img src="{{ url_for('static', filename="logo.png")}}" class="page_logo"> 
+        -->
+        <img src="../static/logo.png" class="page_logo">
+    </a>
+  
+    
+    <!----
+    <table border = 1>
+      <tr>
+        <th>Organization</th>
+        <th>Email</th>
+        <th>Zipcode</th>
+      </tr>
+       {% for org, email, zcode, category in check %}
+          <tr>
+             <td> {{ org }} </td>
+             <td> {{ email }} </td>
+             <td> {{ zcode }} </td>
+          </tr>
+       {% endfor %}
+    </table>
+    -->
+    
+      
+      {% for org, email, zcode, category in check %}
+      <p class="text">
+        <strong> ORGANIZATION: </strong> {{org}}
+        <br>
+        <strong> EMAIL:</strong> {{email}}
+        <br>
+        <strong> ZIPCODE: </strong> {{zcode}}
+      </p>
+      <br>
+      <br>
+      {% endfor %}
+      
+    
+    </body>
+
+
+</html>
