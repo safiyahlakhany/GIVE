@@ -14,7 +14,7 @@
 
 .prompt{
   text-align: center;
-  margin: 0 auto;
+  margin: 0px auto;
   max-width: 700px;
   height: 100%;
   width: 98vw;
@@ -59,16 +59,24 @@ select{
   font-size: 25px;
 }
 
+button {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  background: none;
+  outline: none;
+}
 
-/*
+
 #center_button{
  display: inline-block;
  margin: 0 auto;
  border-radius: 208px;
  width: 250px;
  margin: 75px;
-  
-}*/
+
+
+}
 
 .container{
   text-align: center;
