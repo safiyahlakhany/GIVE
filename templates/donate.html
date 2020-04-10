@@ -15,11 +15,11 @@
         <img src="../static/logo.png" class="page_logo">
     </a>
     <img src="{{ url_for('static', filename="donate_2.png")}}" class="title_img"/>
-    
+
     <form action="{{ url_for("donate") }}" method="post" class = check>
-    <h2 class="prompt"> Zipcode: <input type="text" name="zipcode"> </h2>
+    <h2 class="prompt"> Zipcode: <input type="text" name="zipcode" class="input-text"> </h2>
     <h2 class="prompt"> Category:
-      <select name="category">
+      <select name="category" class="drop-down">
         <option value="" disabled selected>Category</option>
         <option value="Bedding"> Bedding </option>
         <option value="Cleaning Supplies"> Cleaning Supplies </option>
@@ -28,14 +28,14 @@
         <option value="Women's Products"> Women's Products </option>
       </select>
     </h2>
-  
+
     <div style="text-align:center;">
-     <input type="image" src="../static/results.png" class="button"> 
+     <input type="image" src="../static/results.png" class="button">
     </div>
-  
+
     </form>
 
-    
+
   </body>
 
 
